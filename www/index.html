@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+
+Animation Framework, initiated by Mehreinfach (http://mehreinfach.de)
+
+official website: http://animation.io
+animator community: http://dev.animation.io
+open source code: https://github.com/mehreinfach/animationframework
+a project by Mehreinfach: http://mehreinfach.de
+
+-->
+
+<html>
+	<head>
+		<title>Animation Framework</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<link rel="stylesheet" type="text/css" href="css/core.css" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/custom.css" charset="utf-8">
+
+		<!-- animation framework: -->
+		<script src="js/animationframework.js"></script>
+		<script src="js/animationconfig.js"></script>
+
+		<!-- your scenes: -->
+		<script src="js/scenes/scene0.js"></script>
+		<script src="js/scenes/scene1.js"></script>
+		<script src="js/scenes/scene2.js"></script>
+		<script src="js/scenes/scene3.js"></script>
+		<script src="js/scenes/scene4.js"></script>
+		<script src="js/scenes/scene5.js"></script>
+		<script src="js/scenes/scene6.js"></script>
+		<script src="js/scenes/scene7.js"></script>
+		<script src="js/scenes/scene8.js"></script>
+		<script src="js/scenes/scene9.js"></script>
+		<script src="js/scenes/scene10.js"></script>
+		<script src="js/scenes/scene11.js"></script>
+		<script src="js/scenes/scene12.js"></script>
+		<script src="js/scenes/scene13.js"></script>
+		<script src="js/scenes/scene14.js"></script>
+		<script src="js/scenes/scene15.js"></script>
+		<script src="js/scenes/scene16.js"></script>
+		<script src="js/scenes/scene17.js"></script>
+	</head>
+
+	<!-- preload files for scene0: -->
+	<div id="preload" style="display: none;">
+	</div>
+
+	<body>	
+		<noscript>
+			<div id="minimalistic" class="minimalistic">
+				<img src="images/fallback.gif">
+			</div>
+		</noscript>
+		<div id="backupdiv" style="display:none;" class="minimalistic">
+			<img src="images/fallback.gif">
+		</div>
+		<!-- <div id="animframe"></div> -->
+		<script>
+			loadAnimation('Animation Framework', 800, 600, 'scene0', 600, 960, 400, 600);
+			// loadAnimationInto('Animation Framework', 'animframe', 'scene0', 800, 600);
+		</script>
+	</body>
+</html>
