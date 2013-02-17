@@ -24,6 +24,6 @@ function getClickPosition(el) {
   stageY = stage.offsetTop - stage.scrollTop + stage.clientTop;
   var clickX = el.clientX - stageX;
   var clickY = el.clientY - stageY;
-  l("click, x: " + clickX + ", y: " + clickY);
+  l("click, " + clickX + ", " + clickY);
 }
-bindEvent(window, "click", getClickPosition);   
+bindEvent(window, "click", getClickPosition);
