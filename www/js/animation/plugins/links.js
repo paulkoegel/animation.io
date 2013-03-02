@@ -1,27 +1,29 @@
-function Linking(actor, url){
-	this.actor = actor;
-	this.url = url
+function Linking(actor, url, triggeredByAction, reactionTargetIndex){
+	linking = new Plugin(0,0, actor, triggeredByAction, reactionTargetIndex); 
+
+	linking.actor = actor;
+	linking.url = url
 
 	if( /iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-		// this.actor.image.addEventListener('touchstart', function(){this.gotourl();}, false);
-		bindEvent(this.actor.image, 'touchstart', function(){this.gotourl();});
+		bindEvent(linking.targetObject.image, 'touchstart', function(){this.gotourl();});
 	} else {
-		//this.actor.image.addEventListener('mousedown', function(){this.gotourl();}, false);
-		bindEvent(this.actor.image, 'mousedown', function(){this.gotourl();});
+		bindEvent(linking.targetObject.image, 'mousedown', function(){this.gotourl();});
 	}
 
-	this.actor.image.gotourl = function(){
+	linking.actor.image.gotourl = function(){
 		this.removeEventListener('mousedown',arguments.callee, false);
 		
 		location.href=url;
 	}
 
 
-	this.actor.image.style.cursor = 'pointer';
+	linking.actor.image.style.cursor = 'pointer';
 
-	this.applybehavior =  function(){
+	linking.applybehavior =  function(){
 		// nothing here
 	};
+
+	return linking;
 }
 
 Actor.prototype.links = function(url) {
